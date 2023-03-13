@@ -6,6 +6,7 @@ Pillow==9.4.0
 streamlit==1.19.0
 tensorflow==2.11.0
 tensorflow_intel
+scikit-image
 
 
 torch~=1.13.1
