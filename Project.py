@@ -11,8 +11,8 @@ from pixellib.tune_bg import alter_bg
 
 
 def instance_seg(img_file, selected_classes):
-    path_to_model = r'C:\Users\soham\PycharmProjects\ML\Mask\frozen_inference_graph_coco.pb'
-    path_to_config = r'C:\Users\soham\PycharmProjects\ML\Mask\mask_rcnn_inception_v2_coco_2018_01_28.pbtxt'
+    path_to_model = 'frozen_inference_graph_coco.pb'
+    path_to_config = 'mask_rcnn_inception_v2_coco_2018_01_28.pbtxt'
 
     model = cv2.dnn.readNetFromTensorflow(path_to_model, path_to_config)
 
@@ -83,8 +83,8 @@ def semantic_seg(img, selected_classes):
     import numpy as np
 
     # Load the model and configuration files
-    path_to_model = r'C:\Users\soham\PycharmProjects\ML\Mask\frozen_inference_graph_coco.pb'
-    path_to_config = r'C:\Users\soham\PycharmProjects\ML\Mask\mask_rcnn_inception_v2_coco_2018_01_28.pbtxt'
+    path_to_model = 'frozen_inference_graph_coco.pb'
+    path_to_config = 'mask_rcnn_inception_v2_coco_2018_01_28.pbtxt'
 
     model = cv2.dnn.readNetFromTensorflow(path_to_model, path_to_config)
 
@@ -156,7 +156,7 @@ def semantic_seg(img, selected_classes):
 def pixellib_segment(input_file, resize_width=640, resize_height=360):
     # Load the segmentation model
     segmentation_model = instance_segmentation()
-    segmentation_model.load_model(r'C:\Users\soham\PycharmProjects\ML\Mask\mask_rcnn_coco.h5')
+    segmentation_model.load_model('mask_rcnn_coco.h5')
 
     # Set the target classes
     segmentation_model.select_target_classes(motorcycle=False, car=True)
